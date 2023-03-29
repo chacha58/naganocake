@@ -11,6 +11,21 @@
   </head>
 
   <body>
+    <header>
+      <h3>LOGO</h3>
+      <% if admin_signed_in? %>
+        <li>商品一覧</li>
+        <li>会員一覧</li>
+        <li>注文履歴一覧</li>
+        <li>ジャンル一覧</li>
+        <li>ログアウト</li>
+      <% else %>
+        <li>About</li>
+        <li>商品一覧</li>
+        <li>新規登録</li>
+        <li>ログイン</li>
+      <% end %>
+    </header>
     <%= yield %>
   </body>
 </html>
